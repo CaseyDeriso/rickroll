@@ -1,0 +1,9 @@
+
+:root {
+
+  --inviation-orange: rgb(247, 148, 64);
+}
+
+body {
+  background-color: var(--inviation-orange);
+}
