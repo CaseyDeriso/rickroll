@@ -1,9 +1,45 @@
 
 :root {
-
+  --width: 18em;
+  --x-speed: 13s;
+  --y-speed: 7s;
+  --transition-speed: 2.2s;
   --inviation-orange: rgb(247, 148, 64);
 }
 
 body {
   background-color: var(--inviation-orange);
+}
+
+#video-container {
+  display: flex;
+  /* width: 30em; */
+  height: 18em;
+}
+
+#video-container[data-status="sleep"] {
+  display: none
+}
+
+.el { 
+  width: var(--width);
+  height: var(--width);
+}
+
+.x {
+  animation: x var(--x-speed) linear infinite alternate;
+}
+.y {
+  animation: y var(--y-speed) linear infinite alternate;
+}
+
+@keyframes x {
+  100% {
+    transform: translateX(calc(100vw - var(--width)));
+  }
+}
+@keyframes y {
+  100% {
+    transform: translateY(calc(100vh - var(--width)));
+  }
 }
